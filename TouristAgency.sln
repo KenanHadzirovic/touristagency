@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristAgency.Services", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristAgency.Data", "TouristAgency.Data\TouristAgency.Data.csproj", "{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristAgency.UI", "TouristAgency.UI\TouristAgency.UI.csproj", "{23923AD1-537C-47DB-B9B1-89F1E88BCF6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23923AD1-537C-47DB-B9B1-89F1E88BCF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23923AD1-537C-47DB-B9B1-89F1E88BCF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23923AD1-537C-47DB-B9B1-89F1E88BCF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23923AD1-537C-47DB-B9B1-89F1E88BCF6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
