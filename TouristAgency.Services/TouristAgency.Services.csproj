@@ -40,7 +40,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -49,11 +48,17 @@
     <Compile Include="Automapper\AutoMapperConfiguration.cs" />
     <Compile Include="Automapper\AutoMapperProfile.cs" />
     <Compile Include="Logic\Business\HotelService.cs" />
-    <Compile Include="Logic\Business\Tourist.cs" />
+    <Compile Include="Logic\Business\TouristService.cs" />
+    <Compile Include="Logic\Interfaces\IHotelService.cs" />
+    <Compile Include="Logic\Interfaces\IRoleService.cs" />
+    <Compile Include="Logic\Interfaces\ITouristService.cs" />
+    <Compile Include="Logic\Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TouristAgency.Contracts\TouristAgency.Contracts.csproj">

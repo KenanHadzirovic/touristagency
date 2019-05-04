@@ -64,6 +64,8 @@
     <Compile Include="Model\Tourist.cs" />
     <Compile Include="Model\TourType.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Repositories\Interfaces\IUserRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
