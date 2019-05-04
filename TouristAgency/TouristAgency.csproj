@@ -165,13 +165,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TouristAgency.Data\TouristAgency.Data.csproj">
+      <Project>{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}</Project>
+      <Name>TouristAgency.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TouristAgency.Services\TouristAgency.Services.csproj">
       <Project>{BF8AB557-FF48-4292-83CB-811494391422}</Project>
       <Name>TouristAgency.Services</Name>

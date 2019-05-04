@@ -64,7 +64,23 @@
     <Compile Include="Model\Tourist.cs" />
     <Compile Include="Model\TourType.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Repositories\Interfaces\IHotelRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IFeatureRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IPrivilegeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IRoleRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITourRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITouristRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITourTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\IUserRepository.cs" />
+    <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\FeatureRepository.cs" />
+    <Compile Include="Repositories\HotelRepository.cs" />
+    <Compile Include="Repositories\PrivilegeRepository.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\TouristRepository.cs" />
+    <Compile Include="Repositories\TourRepository.cs" />
+    <Compile Include="Repositories\TourTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

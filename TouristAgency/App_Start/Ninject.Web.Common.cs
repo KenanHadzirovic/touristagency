@@ -11,6 +11,7 @@ namespace TouristAgency.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using TouristAgency.Data.Repositories;
     using TouristAgency.Services;
 
     public static class NinjectWebCommon 
@@ -62,6 +63,10 @@ namespace TouristAgency.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            // Repositories
+            kernel.Bind<IUserRepository>().To<UserRepository>();
+
+            // Services
             kernel.Bind<IUserService>().To<UserService>();
         }        
     }
