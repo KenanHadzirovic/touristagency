@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,7 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Administration\RoleService.cs" />
+    <Compile Include="Logic\Administration\UserService.cs" />
+    <Compile Include="Automapper\AutoMapperConfiguration.cs" />
+    <Compile Include="Automapper\AutoMapperProfile.cs" />
+    <Compile Include="Logic\Business\HotelService.cs" />
+    <Compile Include="Logic\Business\Tourist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TouristAgency.Contracts\TouristAgency.Contracts.csproj">
+      <Project>{3bdd01a2-1405-48d7-85f0-97e6447f387b}</Project>
+      <Name>TouristAgency.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TouristAgency.Data\TouristAgency.Data.csproj">
+      <Project>{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}</Project>
+      <Name>TouristAgency.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
