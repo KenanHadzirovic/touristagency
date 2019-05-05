@@ -3,9 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './components/login/login.component';
+import { ToursComponent } from './components/tours/tours.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
+import { NewPassengerComponent } from './components/admin/new-passenger/new-passenger.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard/tours', component: ToursComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard/reservations', component: ReservationsComponent, canActivate: [AuthGuard] },
+  { path: 'administration/passenger/new', component: NewPassengerComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent }
 ];
 

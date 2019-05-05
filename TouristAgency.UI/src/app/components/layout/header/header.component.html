@@ -1,20 +1,31 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">SunTour</a>
+  <a class="navbar-brand" [routerLink]="'/'">SunTour</a>
   <div class="navbar-expand mr-auto">
-    <div class="navbar-nav" *ngIf="authService.isAuthenticated()">
-      <a class="nav-item nav-link active" href="#">Ponude</a>
-      <a class="nav-item nav-link" href="#">Rezervacije</a>
-      <a class="nav-item nav-link" href="#">Administracija</a>
-    </div>
+    <ul class="navbar-nav" *ngIf="authService.isAuthenticated()">
+      <li class="nav-item">
+        <a class="nav-item nav-link" [routerLink]="'dashboard/tours'" [routerLinkActive]="['active']">Ponude</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link" [routerLink]="'dashboard/reservations'" [routerLinkActive]="['active']">Rezervacije</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Administracija
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="'administration/passenger/new'" [routerLinkActive]="['active']">Novi putnik</a>
+          </div>
+        </li>
+    </ul>
   </div>
   <div class="navbar-expand ml-auto navbar-nav" *ngIf="authService.isAuthenticated()">
     <div class="navbar-nav">
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-primary my-2 my-sm-0 mr-4" type="submit">Traži</button>
       </form>
-      <a class="nav-item nav-link" href="#">Logout</a>
+      <a class="nav-item nav-link" [routerLink]="'/'" (click)="logOut()">Logout {{ authService.userData.fullName }}</a>
     </div>
   </div>
 </nav>

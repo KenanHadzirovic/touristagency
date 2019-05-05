@@ -1,0 +1,12 @@
+<div class="d-flex p-2 flex-wrap justify-content-around">
+  <div *ngFor="let tour of tours" class="card mt-2 mb-2" style="width: 20rem">
+    <img class="card-img-top" [src]="tour.previewImage" />
+    <div class="card-body">
+      <h5 class="card-title">{{ tour.title }}</h5>
+      <p class="card-text">{{ tour.description }}</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary btn-md mt-2">Više</button>
+    </div>
+  </div>
+</div>
