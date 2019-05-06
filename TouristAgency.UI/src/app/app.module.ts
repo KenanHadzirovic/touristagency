@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { ToursComponent } from './components/tours/tours.component';
 import { ReservationsComponent } from './components/reservations/reservations.component';
 import { NewPassengerComponent } from './components/admin/new-passenger/new-passenger.component';
+import { ManageEmployeesComponent } from './components/admin/manage-employees/manage-employees.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewPassengerComponent } from './components/admin/new-passenger/new-pass
     HeaderComponent,
     ToursComponent,
     ReservationsComponent,
-    NewPassengerComponent
+    NewPassengerComponent,
+    ManageEmployeesComponent
   ],
   imports: [
     BrowserModule,
