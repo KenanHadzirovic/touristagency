@@ -3,28 +3,28 @@
 namespace TouristAgency.Data.Repositories
 {
     /// <inheritdoc/>
-    public class UserRepository : IUserRepository
+    public class TourRepository : ITourRepository
     {
         /// <inheritdoc/>
-        public bool DeleteUser(int userId)
+        public bool DeleteTour(int TourId)
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public ICollection<User> GetAllUsers()
+        public ICollection<Tour> GetAllTours()
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public User GetUser(int userId)
+        public Tour GetTour(int TourId)
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public User UpdateUser(User user)
+        public Tour UpdateTour(Tour Tour)
         {
             throw new System.NotImplementedException();
         }
