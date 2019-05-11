@@ -1,3 +1,71 @@
-<p>
-  reservations works!
-</p>
+<div class="container pb-2 pl-4 pr-4 pt-2 mt-5">
+  <div class="row">
+    <h1 class="h3">Osnovni podaci</h1>
+    <hr />
+  </div>
+
+  <div class="row form-group">
+    <label for="tour">Izaberite aktivnu ponudu:</label>
+    <select name="tour" class="form-control" [(ngModel)]="reservation.tour">
+      <option *ngFor="let tour of tours" [ngValue]="tour">{{ tour.name }} ({{ tour.dateFrom | date }} - {{ tour.dateTo | date }})</option>
+    </select>
+  </div>
+
+  <div class="row form-group">
+    <label for="tourist">Izaberite putnika:</label>
+    <select name="tourist" class="form-control" [(ngModel)]="reservation.tourist">
+      <option *ngFor="let tourist of tourists" [value]="tourist.id">{{ tourist.fullName }}</option>
+    </select>
+  </div>
+  
+  <div class="row mt-4" *ngIf="reservation.tour">
+    <div class="w-100">
+        <h1 class="h3">Detalji o rezervaciji</h1>
+    </div>
+    <div class="row w-100">
+      <div class="d-flex w-100 justify-content-around">
+        <div class="form-group">
+          <label for="location">Lokacija:</label>
+          <input name="location" type="text" class="form-control" disabled [value]="reservation.tour.location" />
+        </div>
+        <div class="form-group">
+          <label for="dateFrom">Početak putovanja:</label>
+          <input name="dateFrom" type="datetime" class="form-control" disabled [value]="reservation.tour.dateFrom | date" />
+        </div>
+        <div class="form-group">
+          <label for="dateTo">Kraj putovanja:</label>
+          <input name="dateTo" type="datetime" class="form-control" disabled [value]="reservation.tour.dateTo | date" />
+        </div>
+      </div>
+      <div class="d-flex w-100 justify-content-around">
+        <div class="form-group">
+          <label for="tourType">Tip putovanja:</label>
+          <input name="tourType" type="text" class="form-control" disabled [value]="reservation.tour.tourType" />
+        </div>
+        <div class="form-group">
+          <label for="hotelName">Hotel:</label>
+          <input name="hotelName" type="text" class="form-control" disabled [value]="reservation.tour.hotel.name" />
+        </div>
+        <div class="form-group">
+          <label for="contactNumber" class="bold">Kontakt broj:</label>
+          <input name="contactNumber" type="text" class="form-control" disabled [value]="reservation.tour.hotel.phoneNumber" />
+        </div>
+      </div>
+      <div class="d-flex w-100 justify-content-around">
+        <div class="form-group">
+          <label for="pricePerDay">Cijena po danu:</label>
+          <input name="pricePerDay" type="number" class="form-control" disabled [value]="reservation.tour.pricePerDay | currency: 'KM'" />
+        </div>
+        <div class="form-group">
+          <label for="price" class="bold">Ukupna cijena:</label>
+          <input name="price" type="number" class="form-control" disabled [value]="reservation.tour.price | currency: 'KM'" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex w-100 justify-content-center">
+    <button type="button" class="btn btn-danger mr-1" (click)="clearForm()">Očisti</button>
+    <button type="button" class="btn btn-success ml-1" (click)="submit()">Potvrdi rezervaciju</button>
+  </div>
+</div>

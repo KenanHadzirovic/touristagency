@@ -14,8 +14,11 @@
             Administracija
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="'administration/passenger/new'" [routerLinkActive]="['active']">Novi putnik</a>
-            <a class="dropdown-item" [routerLink]="'administration/employees'" [routerLinkActive]="['active']">Postavka uposlenika</a>
+            <a class="dropdown-item" [routerLink]="'administration/passenger/new'" [routerLinkActive]="['active']">Novi turist</a>
+            <a class="dropdown-item" [routerLink]="'administration/tour/new'" [routerLinkActive]="['active']">Kreiraj turu</a>
+            <a class="dropdown-item" [routerLink]="'administration/hotel/new'" [routerLinkActive]="['active']">Registruj hotel</a>
+            <a class="dropdown-item" [routerLink]="'administration/employees'" [routerLinkActive]="['active']">Postavke uposlenika</a>
+            <a class="dropdown-item" [routerLink]="'administration/securitymanagement'" [routerLinkActive]="['active']">Postavke privilegija</a>
           </div>
         </li>
     </ul>

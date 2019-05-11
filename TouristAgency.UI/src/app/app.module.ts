@@ -11,6 +11,9 @@ import { ToursComponent } from './components/tours/tours.component';
 import { ReservationsComponent } from './components/reservations/reservations.component';
 import { NewPassengerComponent } from './components/admin/new-passenger/new-passenger.component';
 import { ManageEmployeesComponent } from './components/admin/manage-employees/manage-employees.component';
+import { NewHotelComponent } from './components/admin/new-hotel/new-hotel.component';
+import { NewTourComponent } from './components/admin/new-tour/new-tour.component';
+import { SecurityManagementComponent } from './components/admin/security-management/security-management.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ManageEmployeesComponent } from './components/admin/manage-employees/ma
     ToursComponent,
     ReservationsComponent,
     NewPassengerComponent,
-    ManageEmployeesComponent
+    ManageEmployeesComponent,
+    NewHotelComponent,
+    NewTourComponent,
+    SecurityManagementComponent
   ],
   imports: [
     BrowserModule,

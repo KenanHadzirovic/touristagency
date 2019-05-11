@@ -10,13 +10,13 @@ export class EmployeeService {
 
   getAll = (): Employee[] => {
     return [
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
-      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleName: "Administrator"},
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
+      { address: "Neka adresa", dateOfBirth: new Date(1995, 4, 4), fullName: "Mirza Vucijak", id: 1, phoneNumber: "033-225-883", roleId: 1 },
     ]
   }
 }

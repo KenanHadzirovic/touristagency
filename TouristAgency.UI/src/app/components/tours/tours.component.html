@@ -2,7 +2,7 @@
   <div *ngFor="let tour of tours" class="card mt-2 mb-2" style="width: 20rem">
     <img class="card-img-top" [src]="tour.previewImage" />
     <div class="card-body">
-      <h5 class="card-title">{{ tour.title }}</h5>
+      <h5 class="card-title">{{ tour.name }}</h5>
       <p class="card-text">{{ tour.description }}</p>
     </div>
     <div class="card-footer">

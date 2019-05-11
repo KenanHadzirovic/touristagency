@@ -3,6 +3,6 @@ export class Employee {
     dateOfBirth: Date;
     address: string;
     id: number;
-    roleName: string;
+    roleId: number;
     phoneNumber: string;
 }

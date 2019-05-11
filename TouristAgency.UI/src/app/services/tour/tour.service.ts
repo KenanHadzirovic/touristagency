@@ -14,43 +14,59 @@ export class TourService {
 
     return [ 
       {
+        id: 1,
+        location: "Venecija",
         previewImage: image,
-        title: "Venecija",
+        name: "Venecija",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      },
+      {
+        id: 1,
+        location: "Barselona",
+        previewImage: image,
+        name: "Barselona",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
+        id: 1,
+        location: "Pariz",
         previewImage: image,
-        title: "Barselona",
+        name: "Pariz",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
+        id: 1,
+        location: "Monako",
         previewImage: image,
-        title: "Pariz",
+        name: "Monako",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
+        id: 1,
+        location: "Minhen",
         previewImage: image,
-        title: "Monako",
+        name: "Minhen",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
+        id: 1,
+        location: "London",
         previewImage: image,
-        title: "Minhen",
+        name: "London",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
-      {
+      {        
+        id: 1,
+        location: "Dablin",
         previewImage: image,
-        title: "London",
+        name: "Dablin",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
-      {
+      {        
+        id: 1,
+        location: "Kopenhagen",
         previewImage: image,
-        title: "Dablin",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      },
-      {
-        previewImage: image,
-        title: "Kopenhagen",
+        name: "Kopenhagen",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
     ];

@@ -9,6 +9,11 @@ import { EmployeeService } from '../../../services/employee/employee.service';
 export class ManageEmployeesComponent implements OnInit {
 
   private employees: any;
+  private roles: any[] = [
+    { id: 1, name: "Administrator" },
+    { id: 2, name: "Agent" },
+    { id: 3, name: "Support" },
+  ];
 
   constructor(private employeeService: EmployeeService) { }
 

@@ -16,7 +16,11 @@
               <td>{{ employee.dateOfBirth | date }}</td>
               <td>{{ employee.address }}</td>
               <td>{{ employee.phoneNumber }}</td>
-              <td>{{ employee.roleName }}</td>
+              <td>
+                <select class="form-control" [(ngModel)]="employee.roleId">
+                  <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+                </select>
+              </td>
               <td>
                 <button class="btn btn-danger">Obriši</button>
               </td>
