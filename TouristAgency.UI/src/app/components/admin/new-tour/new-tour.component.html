@@ -1,3 +1,113 @@
-<p>
-  new-tour works!
-</p>
+<div class="container pb-2 pl-4 pr-4 pt-2 mt-5 shadow rounded">
+    <div class="row">
+      <h1 class="h3">Osnovni podaci</h1>
+      <hr />
+    </div>
+  
+    <div class="row">
+      <div class="d-flex w-100 justify-content-between">
+        <div class="form-group">
+          <label for="location">Naziv ture:</label>
+          <input name="location" type="text" class="form-control" [(ngModel)]="tour.name" />
+        </div>
+
+        <div class="form-group">
+          <label for="location">Lokacija:</label>
+          <input name="location" type="text" class="form-control" [(ngModel)]="tour.location" />
+        </div>
+
+        <div class="form-group">
+          <label for="location">Max broj putnika:</label>
+          <input name="location" type="number" min="1" step="1" class="form-control" [(ngModel)]="tour.maxTourists" />
+        </div>
+      </div>
+      <div class="d-flex w-100">
+        <div class="form-group w-100">
+          <label for="description">Opis:</label>
+          <textarea name="description" class="form-control" [(ngModel)]="tour.description" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="w-100">
+          <h1 class="h3">Detalji</h1>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <div class="form-group">
+          <label for="tourType">Tip putovanja:</label>
+          <input name="tourType" type="text" class="form-control" [(ngModel)]="tour.tourType" />
+        </div>
+        <div class="form-group">
+          <label for="dateFrom">Početak putovanja:</label>
+          <input name="dateFrom" type="date" class="form-control" [(ngModel)]="tour.dateFrom" />
+        </div>
+        <div class="form-group">
+          <label for="dateTo">Kraj putovanja:</label>
+          <input name="dateTo" type="date" class="form-control" [(ngModel)]="tour.dateTo" />
+        </div>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <div class="form-group">
+          <label for="hotel">Hotel:</label>
+          <select name="hotel" class="form-control" [(ngModel)]="tour.hotel">
+            <option *ngFor="let h of hotels" [ngValue]="h">{{ h.name }} ({{ h.stars }}/5, {{ h.address }}, {{ h.city }})</option>
+          </select>
+        </div>
+        <div class="form-group" *ngIf="tour.hotel">
+          <label for="pricePerDay">Kontakt broj hotela:</label>
+          <input name="pricePerDay" type="text" class="form-control" disabled [(ngModel)]="tour.hotel.phoneNumber" />
+        </div>
+        <div class="form-group">
+          <label for="dateTo">Slika putovanja:</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Pronađite sliku</label>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <div class="form-group">
+          <label for="pricePerDay">Cijena po danu:</label>
+          <input name="pricePerDay" type="number" class="form-control" [(ngModel)]="tour.pricePerDay" />
+        </div>
+        <div class="form-group">
+          <label for="price" class="bold">Ukupna cijena:</label>
+          <input name="price" type="number" class="form-control" [(ngModel)]="tour.price" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="d-flex w-100 justify-content-between">
+        <h1 class="h4 mr-auto">Dodaci</h1>
+        <button class="btn btn-outline-primary" (click)="addNewFeature()">Dodaj novi</button>
+      </div>
+
+      <table class="table table-striped table-bordered w-100 shadow rounded mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Naziv</th>
+              <th scope="col">Datum</th>
+              <th scope="col">Cijena</th>
+              <th scope="col">Akcije</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let f of tour.features; let i = index">
+              <td>{{ f.name }}</td>
+              <td>{{ f.datetime }}</td>
+              <td>{{ f.price }}</td>
+              <td>
+                <button class="btn btn-outline-danger" (click)="removeFeature(i)">Obriši</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex w-100 justify-content-center">
+      <button type="button" class="btn btn-danger mr-1" (click)="clearForm()">Očisti</button>
+      <button type="button" class="btn btn-success ml-1" (click)="save()">Kreiraj turu</button>
+    </div>
+  </div>

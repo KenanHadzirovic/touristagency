@@ -18,6 +18,7 @@ import { TourDetailsComponent } from './components/tour-details/tour-details.com
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewRoleComponent } from './components/admin/security-management/new-role/new-role.component';
 import { NewPrivilegeComponent } from './components/admin/security-management/new-privilege/new-privilege.component';
+import { NewFeatureComponent } from './components/admin/new-tour/new-feature/new-feature.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NewPrivilegeComponent } from './components/admin/security-management/ne
     SecurityManagementComponent,
     TourDetailsComponent,
     NewRoleComponent,
-    NewPrivilegeComponent
+    NewPrivilegeComponent,
+    NewFeatureComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { NewPrivilegeComponent } from './components/admin/security-management/ne
   entryComponents: [
     TourDetailsComponent,
     NewRoleComponent,
-    NewPrivilegeComponent
+    NewPrivilegeComponent,
+    NewFeatureComponent
   ]
 })
 export class AppModule { }

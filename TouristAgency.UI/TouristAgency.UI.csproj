@@ -201,6 +201,8 @@
     <Content Include="src\app\components\admin\new-hotel\new-hotel.component.html" />
     <Content Include="src\app\components\admin\new-passenger\new-passenger.component.css" />
     <Content Include="src\app\components\admin\new-passenger\new-passenger.component.html" />
+    <Content Include="src\app\components\admin\new-tour\new-feature\new-feature.component.css" />
+    <Content Include="src\app\components\admin\new-tour\new-feature\new-feature.component.html" />
     <Content Include="src\app\components\admin\new-tour\new-tour.component.css" />
     <Content Include="src\app\components\admin\new-tour\new-tour.component.html" />
     <Content Include="src\app\components\admin\security-management\new-privilege\new-privilege.component.css" />
@@ -250,6 +252,8 @@
     <TypeScriptCompile Include="src\app\components\admin\new-hotel\new-hotel.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\new-passenger\new-passenger.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\admin\new-passenger\new-passenger.component.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\new-tour\new-feature\new-feature.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\components\admin\new-tour\new-feature\new-feature.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\new-tour\new-tour.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\admin\new-tour\new-tour.component.ts" />
     <TypeScriptCompile Include="src\app\components\admin\security-management\new-privilege\new-privilege.component.spec.ts" />
@@ -271,6 +275,8 @@
     <TypeScriptCompile Include="src\app\components\tours\tours.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\tours\tours.component.ts" />
     <TypeScriptCompile Include="src\app\models\employee.ts" />
+    <TypeScriptCompile Include="src\app\models\feature-type.ts" />
+    <TypeScriptCompile Include="src\app\models\feature.ts" />
     <TypeScriptCompile Include="src\app\models\hotel.ts" />
     <TypeScriptCompile Include="src\app\models\privilege.ts" />
     <TypeScriptCompile Include="src\app\models\reservation.ts" />

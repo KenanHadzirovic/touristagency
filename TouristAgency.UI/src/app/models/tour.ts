@@ -1,4 +1,5 @@
 import { Hotel } from './hotel';
+import { Feature } from './feature';
 
 export class Tour {
     id: number;
@@ -12,4 +13,5 @@ export class Tour {
     pricePerDay?: number;
     price?: number;
     tourType?: string;
+    features?: Feature[] = [];
 }

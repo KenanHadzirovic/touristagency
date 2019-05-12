@@ -44,7 +44,12 @@ export class ReservationsComponent implements OnInit {
       description: "...",
       tourType: "Škola u prirodi",
       price: 1000,
-      pricePerDay: 100
+      pricePerDay: 100,
+      features: [
+        { name: "Izlet 1", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' },
+        { name: "Izlet 2", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' },
+        { name: "Izlet 3", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' },
+      ],
     },
     { 
       id: 3,

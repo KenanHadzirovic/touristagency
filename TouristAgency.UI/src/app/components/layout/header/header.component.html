@@ -25,10 +25,10 @@
   </div>
   <div class="navbar-expand ml-auto navbar-nav" *ngIf="authService.isAuthenticated()">
     <div class="navbar-nav">
-      <form class="form-inline my-2 my-lg-0">
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-primary my-2 my-sm-0 mr-4" type="submit">Traži</button>
-      </form>
+      </form> -->
       <a class="nav-item nav-link" [routerLink]="'/'" (click)="logOut()">Logout {{ authService.userData.fullName }}</a>
     </div>
   </div>

@@ -22,6 +22,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100, hotel: {
           id: 1,
@@ -39,6 +42,9 @@ export class TourService {
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
         price: 1000,
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         pricePerDay: 100, hotel: {
           id: 1,
           name: 'Ime hotela',
@@ -54,6 +60,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100, hotel: {
           id: 1,
@@ -70,6 +79,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100, hotel: {
           id: 1,
@@ -86,6 +98,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100, hotel: {
           id: 1,
@@ -102,6 +117,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100, hotel: {
           id: 1,
@@ -118,6 +136,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100, hotel: {
           id: 1,
@@ -134,6 +155,9 @@ export class TourService {
         dateFrom: new Date(2019, 1, 1),
         dateTo: new Date(2019, 1, 11),
         tourType: "Ekskurzija za SŠ",
+        features: [
+          { name: "Izlet", price: 100, datetime: new Date(2019, 1, 2), id: 1, description: 'Opis...' }
+        ],
         price: 1000,
         pricePerDay: 100,
         hotel: {

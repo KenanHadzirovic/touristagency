@@ -1,0 +1,34 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">Kreiraj novi dodatak</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="hotel">Tip dodatka:</label>
+      <select name="hotel" class="form-control" [(ngModel)]="feature.type">
+        <option *ngFor="let ft of featureTypes" [ngValue]="ft">{{ ft.name }}</option>
+      </select>
+    </div>
+    <div class="d-flex w-100">
+      <div class="form-group">
+        <label for="name">Naziv:</label>
+        <input name="name" type="text" class="form-control" [(ngModel)]="feature.name" />
+      </div>
+      <div class="form-group">
+        <label for="name">Datum:</label>
+        <input name="name" type="date" class="form-control" [(ngModel)]="feature.datetime" />
+      </div>
+      <div class="form-group">
+        <label for="name">Cijena:</label>
+        <input name="name" type="number" class="form-control" [(ngModel)]="feature.price" />
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="activeModal.close(feature)">Dodaj</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close()">Zatvori</button>
+  </div>
+</div>
