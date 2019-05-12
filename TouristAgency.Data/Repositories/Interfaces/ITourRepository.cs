@@ -30,5 +30,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="tour"></param>
         /// <returns></returns>
         Tour UpdateTour(Tour tour);
+        /// <summary>
+        /// Add a new Tour to the database
+        /// </summary>
+        /// <param name="tour">Tour to be added</param>
+        /// <returns>Newly added Tour</returns>
+        Tour CreateTour(Tour tour);
     }
 }

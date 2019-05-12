@@ -30,5 +30,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="privilege"></param>
         /// <returns></returns>
         Privilege UpdatePrivilege(Privilege privilege);
+        /// <summary>
+        /// Add a new Privilege to the database
+        /// </summary>
+        /// <param name="privilege">Privilege to be added</param>
+        /// <returns>Newly added Privilege</returns>
+        Privilege CreatePrivilege(Privilege privilege);
     }
 }

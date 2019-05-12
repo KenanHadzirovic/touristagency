@@ -14,7 +14,7 @@ namespace TouristAgency.Data
         [Column("Feature")]
         [Required]
         [StringLength(50)]
-        public string Feature1 { get; set; }
+        public string FeatureName { get; set; }
 
         public DateTime DateTime { get; set; }
 

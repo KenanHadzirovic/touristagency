@@ -3,15 +3,15 @@
 namespace TouristAgency.Contracts
 {
     [DataContract]
-    public class User
+    public class Privilege
     {
         [DataMember]
-        public int UserId { get; set; }
+        public int PrivilegeId { get; set; }
 
         [DataMember]
-        public string Username { get; set; }
+        public string Name { get; set; }
 
         [DataMember]
-        public Employee Employee { get; set; }
+        public string Description { get; set; }
     }
 }

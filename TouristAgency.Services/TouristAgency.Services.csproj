@@ -43,19 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Administration\EmployeeService.cs" />
+    <Compile Include="Logic\Administration\PrivilegeService.cs" />
     <Compile Include="Logic\Administration\RoleService.cs" />
     <Compile Include="Logic\Administration\UserService.cs" />
     <Compile Include="Automapper\AutoMapperConfiguration.cs" />
     <Compile Include="Automapper\AutoMapperProfile.cs" />
+    <Compile Include="Logic\Business\FeatureService.cs" />
     <Compile Include="Logic\Business\HotelService.cs" />
+    <Compile Include="Logic\Business\TourService.cs" />
+    <Compile Include="Logic\Business\TourTypeService.cs" />
+    <Compile Include="Logic\Interfaces\IEmployeeService.cs" />
     <Compile Include="Logic\Business\TouristService.cs" />
+    <Compile Include="Logic\Interfaces\IFeatureService.cs" />
     <Compile Include="Logic\Interfaces\IHotelService.cs" />
+    <Compile Include="Logic\Interfaces\IPrivilegeService.cs" />
     <Compile Include="Logic\Interfaces\IRoleService.cs" />
     <Compile Include="Logic\Interfaces\ITouristService.cs" />
+    <Compile Include="Logic\Interfaces\ITourService.cs" />
+    <Compile Include="Logic\Interfaces\ITourTypeService.cs" />
     <Compile Include="Logic\Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -69,6 +80,9 @@
       <Project>{0ADBEE4D-3CF8-4BCE-B785-97C35B83E3E9}</Project>
       <Name>TouristAgency.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

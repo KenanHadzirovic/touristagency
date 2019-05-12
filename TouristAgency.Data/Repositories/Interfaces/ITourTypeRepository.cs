@@ -30,5 +30,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="tourType"></param>
         /// <returns></returns>
         TourType UpdateTourType(TourType tourType);
+        /// <summary>
+        /// Add a new TourType to the database
+        /// </summary>
+        /// <param name="tourType">TourType to be added</param>
+        /// <returns>Newly added TourType</returns>
+        TourType CreateTourType(TourType tourType);
     }
 }

@@ -28,5 +28,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="hotel"></param>
         /// <returns></returns>
         Hotel UpdateHotel(Hotel hotel);
+        /// <summary>
+        /// Add a new Hotel to the database
+        /// </summary>
+        /// <param name="hotel">Hotel to be added</param>
+        /// <returns>Newly added Hotel</returns>
+        Hotel CreateHotel(Hotel hotel);
     }
 }

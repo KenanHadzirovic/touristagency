@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TouristAgency.Data.Repositories
 {
     /// <inheritdoc/>
     public class TourTypeRepository : ITourTypeRepository
     {
+        private DataModel _context;
+
+        TourTypeRepository(DataModel context)
+        {
+            _context = context;
+        }
+
+
         /// <inheritdoc/>
         public bool DeleteTourType(int TourTypeId)
         {
@@ -14,19 +23,38 @@ namespace TouristAgency.Data.Repositories
         /// <inheritdoc/>
         public ICollection<TourType> GetAllTourTypes()
         {
-            throw new System.NotImplementedException();
+            return _context.TourType.ToList();
         }
 
         /// <inheritdoc/>
-        public TourType GetTourType(int TourTypeId)
+        public TourType GetTourType(int tourTypeId)
         {
-            throw new System.NotImplementedException();
+            return _context.TourType.FirstOrDefault(x => x.TourTypeId == tourTypeId);
+        }
+
+        ///<inheritdoc/>
+        public TourType CreateTourType(TourType tourType)
+        {
+            _context.TourType.Add(tourType);
+            return tourType;
         }
 
         /// <inheritdoc/>
-        public TourType UpdateTourType(TourType TourType)
+        public TourType UpdateTourType(TourType tourType)
         {
-            throw new System.NotImplementedException();
+            return Update(_context.TourType.FirstOrDefault(x => x.TourTypeId == tourType.TourTypeId), tourType);
+        }
+
+        private TourType Update(TourType tourType, TourType newTourType)
+        {
+            tourType.TourTypeId = newTourType.TourTypeId;
+            tourType.Price = newTourType.Price;
+            tourType.PricePerDay = newTourType.PricePerDay;
+            tourType.Name = newTourType.Name;
+            tourType.MaxTourists = newTourType.MaxTourists;
+            tourType.Location = newTourType.Location;
+
+            return tourType;
         }
     }
 }

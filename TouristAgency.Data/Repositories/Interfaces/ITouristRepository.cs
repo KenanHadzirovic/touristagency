@@ -30,5 +30,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="tourist"></param>
         /// <returns></returns>
         Tourist UpdateTourist(Tourist tourist);
+        /// <summary>
+        /// Add a new Tourist to the database
+        /// </summary>
+        /// <param name="tourist">Tourist to be added</param>
+        /// <returns>Newly added Tourist</returns>
+        Tourist CreateTourist(Tourist tourist);
     }
 }

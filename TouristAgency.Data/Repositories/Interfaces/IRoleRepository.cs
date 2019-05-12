@@ -30,5 +30,12 @@ namespace TouristAgency.Data.Repositories
         /// <param name="role"></param>
         /// <returns></returns>
         Role UpdateRole(Role role);
+
+        /// <summary>
+        /// Add a new Role to the database
+        /// </summary>
+        /// <param name="role">Role to be added</param>
+        /// <returns>Newly added role</returns>
+        Role CreateRole(Role role);
     }
 }

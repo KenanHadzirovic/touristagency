@@ -30,5 +30,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="feature"></param>
         /// <returns></returns>
         Feature UpdateFeature(Feature feature);
+        /// <summary>
+        /// Add a new Feature to the database
+        /// </summary>
+        /// <param name="feature">Feature to be added</param>
+        /// <returns>Newly added Feature</returns>
+        Feature CreateFeature(Feature feature);
     }
 }

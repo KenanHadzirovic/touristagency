@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\Employee.cs" />
+    <Compile Include="Administration\Privilege.cs" />
+    <Compile Include="Administration\Role.cs" />
     <Compile Include="Administration\User.cs" />
+    <Compile Include="Business\Feature.cs" />
+    <Compile Include="Business\FeatureType.cs" />
+    <Compile Include="Business\Hotel.cs" />
+    <Compile Include="Business\Tour.cs" />
     <Compile Include="Business\Tourist.cs" />
+    <Compile Include="Business\TourType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,32 +1,58 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TouristAgency.Data.Repositories
 {
     /// <inheritdoc/>
     public class EmployeeRepository : IEmployeeRepository
     {
-        /// <inheritdoc/>
-        public bool DeleteEmployee(int EmployeeId)
+        private DataModel _context;
+
+        EmployeeRepository(DataModel context)
         {
-            throw new System.NotImplementedException();
+            _context = context;
+        }
+
+        /// <inheritdoc/>
+        public bool DeleteEmployee(int employeeId)
+        {
+            //_context.Employee.Remove(x => x.Id == employeeId);
+            return true;
         }
 
         /// <inheritdoc/>
         public ICollection<Employee> GetAllEmployees()
         {
-            throw new System.NotImplementedException();
+            return _context.Employee.ToList();
         }
 
         /// <inheritdoc/>
-        public Employee GetEmployee(int EmployeeId)
+        public Employee GetEmployee(int employeeId)
         {
-            throw new System.NotImplementedException();
+            return _context.Employee.FirstOrDefault(x => x.EmployeeId == employeeId);
         }
 
         /// <inheritdoc/>
-        public Employee UpdateEmployee(Employee Employee)
+        public Employee UpdateEmployee(Employee employee)
         {
-            throw new System.NotImplementedException();
+            return Update(_context.Employee.FirstOrDefault(x => x.EmployeeId == employee.EmployeeId), employee);
+        }
+
+        ///<inheritdoc/>
+        public Employee CreateEmployee(Employee employee)
+        {
+            _context.Employee.Add(employee);
+            return employee;
+        }
+
+        private Employee Update(Employee employee, Employee newEmployee)
+        {
+            employee.Address = newEmployee.Address;
+            employee.DateOfBirth = newEmployee.DateOfBirth;
+            employee.FirstName = newEmployee.FirstName;
+            employee.LastName = newEmployee.LastName;
+            employee.UserId = newEmployee.UserId;
+            return employee;
         }
     }
 }

@@ -30,5 +30,11 @@ namespace TouristAgency.Data.Repositories
         /// <param name="employee"></param>
         /// <returns></returns>
         Employee UpdateEmployee(Employee employee);
+        /// <summary>
+        /// Add a new Employee to the database
+        /// </summary>
+        /// <param name="employee">Employee to be added</param>
+        /// <returns>Newly added Employee</returns>
+        Employee CreateEmployee(Employee employee);
     }
 }

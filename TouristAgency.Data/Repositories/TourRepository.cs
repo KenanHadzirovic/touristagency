@@ -1,10 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TouristAgency.Data.Repositories
 {
     /// <inheritdoc/>
     public class TourRepository : ITourRepository
     {
+        private DataModel _context;
+
+        TourRepository(DataModel context)
+        {
+            _context = context;
+        }
+
         /// <inheritdoc/>
         public bool DeleteTour(int TourId)
         {
@@ -14,19 +22,35 @@ namespace TouristAgency.Data.Repositories
         /// <inheritdoc/>
         public ICollection<Tour> GetAllTours()
         {
-            throw new System.NotImplementedException();
+            return _context.Tour.ToList();
         }
 
         /// <inheritdoc/>
-        public Tour GetTour(int TourId)
+        public Tour GetTour(int tourId)
         {
-            throw new System.NotImplementedException();
+            return _context.Tour.FirstOrDefault(x => x.TourId == tourId);
         }
 
         /// <inheritdoc/>
-        public Tour UpdateTour(Tour Tour)
+        public Tour CreateTour(Tour tour)
         {
-            throw new System.NotImplementedException();
+            _context.Tour.Add(tour);
+            return tour;
+        }
+
+        /// <inheritdoc/>
+        public Tour UpdateTour(Tour tour)
+        {
+            return Update(_context.Tour.FirstOrDefault(x => x.TourId == tour.TourId), tour);
+        }
+
+        private Tour Update(Tour tour, Tour newTour)
+        {
+            tour.TourId = newTour.TourId;
+            tour.TouristId = newTour.TouristId;
+            tour.HotelId = newTour.HotelId;
+            tour.TourTypeId = newTour.TourTypeId;
+            return tour;
         }
     }
 }
