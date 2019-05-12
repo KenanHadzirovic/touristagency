@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Reservation } from '../../models/reservation';
 import { Tour } from '../../models/tour';
 import { Tourist } from '../../models/Tourist';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservations',
@@ -69,7 +70,13 @@ export class ReservationsComponent implements OnInit {
     { id: 2, fullName: "Satya Nadella" },
   ]
 
-  constructor() { }
+  constructor(private router: Router) { 
+    let tourData = this.router.getCurrentNavigation().extras.state;
+    
+    if (tourData) {
+      this.reservation.tour = this.tours.find(x => x.id == tourData.id);
+    }
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,54 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{ tour?.name }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="row w-100" *ngIf="tour">
+        <div class="d-flex w-100 justify-content-around">
+          <div class="form-group">
+            <label for="location">Lokacija:</label>
+            <input name="location" type="text" class="form-control" disabled [value]="tour.location" />
+          </div>
+          <div class="form-group">
+            <label for="dateFrom">Početak putovanja:</label>
+            <input name="dateFrom" type="datetime" class="form-control" disabled [value]="tour.dateFrom | date" />
+          </div>
+          <div class="form-group">
+            <label for="dateTo">Kraj putovanja:</label>
+            <input name="dateTo" type="datetime" class="form-control" disabled [value]="tour.dateTo | date" />
+          </div>
+        </div>
+        <div class="d-flex w-100 justify-content-around">
+          <div class="form-group">
+            <label for="tourType">Tip putovanja:</label>
+            <input name="tourType" type="text" class="form-control" disabled [value]="tour.tourType" />
+          </div>
+          <div class="form-group">
+            <label for="hotelName">Hotel:</label>
+            <input name="hotelName" type="text" class="form-control" disabled [value]="tour.hotel.name" />
+          </div>
+          <div class="form-group">
+            <label for="contactNumber" class="bold">Kontakt broj:</label>
+            <input name="contactNumber" type="text" class="form-control" disabled [value]="tour.hotel.phoneNumber" />
+          </div>
+        </div>
+        <div class="d-flex w-100 justify-content-around">
+          <div class="form-group">
+            <label for="pricePerDay">Cijena po danu:</label>
+            <input name="pricePerDay" type="text" class="form-control" disabled [value]="tour.pricePerDay | currency: 'KM'" />
+          </div>
+          <div class="form-group">
+            <label for="price" class="bold">Ukupna cijena:</label>
+            <input name="price" type="text" class="form-control" disabled [value]="tour.price | currency: 'KM'" />
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="newReservation()">Nova rezervacija</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Zatvori</button>
+  </div>
+</div>

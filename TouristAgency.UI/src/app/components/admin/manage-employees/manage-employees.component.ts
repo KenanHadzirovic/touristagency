@@ -21,4 +21,9 @@ export class ManageEmployeesComponent implements OnInit {
     this.employees = this.employeeService.getAll();
   }
 
+  removeEmployee = (index: number) => {
+    this.employees.splice(index, 1);
+    // TODO: go to service and remove this employee
+  }
+
 }
