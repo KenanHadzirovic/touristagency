@@ -5,13 +5,13 @@ namespace TouristAgency.App_Start
 {
     using System;
     using System.Web;
-
+    using System.Web.Http;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
-    using TouristAgency.Data.Repositories;
+    using Ninject.Web.WebApi;
     using TouristAgency.Services;
 
     public static class NinjectWebCommon 
@@ -47,6 +47,7 @@ namespace TouristAgency.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+                GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
                 RegisterServices(kernel);
                 return kernel;
             }
@@ -63,10 +64,6 @@ namespace TouristAgency.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            // Repositories
-            kernel.Bind<IUserRepository>().To<UserRepository>();
-
-            // Services
             kernel.Bind<IUserService>().To<UserService>();
         }        
     }
