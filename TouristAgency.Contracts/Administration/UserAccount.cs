@@ -3,10 +3,10 @@
 namespace TouristAgency.Contracts
 {
     [DataContract]
-    public class User
+    public class UserAccount
     {
         [DataMember]
-        public int UserId { get; set; }
+        public int UserAccountId { get; set; }
 
         [DataMember]
         public string Username { get; set; }

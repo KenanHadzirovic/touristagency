@@ -10,7 +10,7 @@ namespace TouristAgency.Services
     {
         private IFeatureRepository _featureRepository;
 
-        FeatureService(IFeatureRepository featureRepository)
+        public FeatureService(IFeatureRepository featureRepository)
         {
             _featureRepository = featureRepository;
         }

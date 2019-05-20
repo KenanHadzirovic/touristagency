@@ -9,7 +9,7 @@ namespace TouristAgency.Services
     {
         private IEmployeeRepository _employeeRepository;
         
-        EmployeeService(IEmployeeRepository employeeRepository)
+        public EmployeeService(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
         }

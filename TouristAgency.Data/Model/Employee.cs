@@ -29,8 +29,8 @@ namespace TouristAgency.Data
         [StringLength(12)]
         public string PhoneNumber { get; set; }
 
-        public int UserId { get; set; }
+        public int UserAccountId { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual UserAccount UserAccount { get; set; }
     }
 }

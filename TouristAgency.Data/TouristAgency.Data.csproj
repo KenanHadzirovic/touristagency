@@ -81,7 +81,7 @@
     <Compile Include="Model\Tour.cs" />
     <Compile Include="Model\Tourist.cs" />
     <Compile Include="Model\TourType.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserAccount.cs" />
     <Compile Include="Repositories\Interfaces\IHotelRepository.cs" />
     <Compile Include="Repositories\Interfaces\IEmployeeRepository.cs" />
     <Compile Include="Repositories\Interfaces\IFeatureRepository.cs" />

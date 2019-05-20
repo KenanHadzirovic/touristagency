@@ -9,7 +9,7 @@ namespace TouristAgency.Services
     {
         private IPrivilegeRepository _privilegeRepository;
 
-        PrivilegeService(IPrivilegeRepository privilegeRepository)
+        public PrivilegeService(IPrivilegeRepository privilegeRepository)
         {
             _privilegeRepository = privilegeRepository;
         }

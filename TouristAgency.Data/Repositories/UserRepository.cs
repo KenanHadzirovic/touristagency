@@ -4,53 +4,53 @@ using System.Linq;
 namespace TouristAgency.Data.Repositories
 {
     /// <inheritdoc/>
-    public class UserRepository : IUserRepository
+    public class UserAccountRepository : IUserAccountRepository
     {
         private DataModel _context;
 
-        UserRepository(DataModel context)
+        public UserAccountRepository(DataModel context)
         {
             _context = context;
         }
 
         /// <inheritdoc/>
-        public bool DeleteUser(int userId)
+        public bool DeleteUserAccount(int userAccountId)
         {
             
             return true;
         }
 
         /// <inheritdoc/>
-        public ICollection<User> GetAllUsers()
+        public ICollection<UserAccount> GetAllUserAccounts()
         {
-            return _context.User.ToList();
+            return _context.UserAccount.ToList();
         }
 
         /// <inheritdoc/>
-        public User GetUser(int userId)
+        public UserAccount GetUserAccount(int userAccountId)
         {
-            return _context.User.FirstOrDefault(x => x.UserId == userId);
+            return _context.UserAccount.FirstOrDefault(x => x.UserAccountId == userAccountId);
         }
 
         ///<inheritdoc/>
-        public User CreateUser(User user)
+        public UserAccount CreateUserAccount(UserAccount userAccount)
         {
-            _context.User.Add(user);
-            return user;
+            _context.UserAccount.Add(userAccount);
+            return userAccount;
         }
 
         /// <inheritdoc/>
-        public User UpdateUser(User user)
+        public UserAccount UpdateUserAccount(UserAccount userAccount)
         {
-            return Update(_context.User.FirstOrDefault(x => x.UserId == user.UserId), user);
+            return Update(_context.UserAccount.FirstOrDefault(x => x.UserAccountId == userAccount.UserAccountId), userAccount);
         }
 
-        private User Update(User user, User newUser)
+        private UserAccount Update(UserAccount userAccount, UserAccount newUserAccount)
         {
-            user.RoleId = newUser.RoleId;
-            user.UserId = newUser.UserId;
-            user.Username = newUser.Username;
-            return user;
+            userAccount.RoleId = newUserAccount.RoleId;
+            userAccount.UserAccountId = newUserAccount.UserAccountId;
+            userAccount.Username = newUserAccount.Username;
+            return userAccount;
         }
     }
 }

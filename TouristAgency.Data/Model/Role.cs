@@ -13,7 +13,7 @@ namespace TouristAgency.Data
         public Role()
         {
             RolePrivilege = new HashSet<RolePrivilege>();
-            User = new HashSet<User>();
+            UserAccount = new HashSet<UserAccount>();
         }
 
         public int RoleId { get; set; }
@@ -26,6 +26,6 @@ namespace TouristAgency.Data
         public virtual ICollection<RolePrivilege> RolePrivilege { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> User { get; set; }
+        public virtual ICollection<UserAccount> UserAccount { get; set; }
     }
 }

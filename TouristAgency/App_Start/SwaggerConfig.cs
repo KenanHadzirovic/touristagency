@@ -229,7 +229,7 @@ namespace TouristAgency
 
                         // If your API has multiple versions and you've applied the MultipleApiVersions setting
                         // as described above, you can also enable a select box in the swagger-ui, that displays
-                        // a discovery URL for each version. This provides a convenient way for users to browse documentation
+                        // a discovery URL for each version. This provides a convenient way for UserAccounts to browse documentation
                         // for different API versions.
                         //
                         //c.EnableDiscoveryUrlSelector();

@@ -46,8 +46,7 @@
     <Compile Include="Logic\Administration\EmployeeService.cs" />
     <Compile Include="Logic\Administration\PrivilegeService.cs" />
     <Compile Include="Logic\Administration\RoleService.cs" />
-    <Compile Include="Logic\Administration\UserService.cs" />
-    <Compile Include="Automapper\AutoMapperConfiguration.cs" />
+    <Compile Include="Logic\Administration\UserAccountService.cs" />
     <Compile Include="Automapper\AutoMapperProfile.cs" />
     <Compile Include="Logic\Business\FeatureService.cs" />
     <Compile Include="Logic\Business\HotelService.cs" />

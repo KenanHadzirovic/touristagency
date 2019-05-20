@@ -3,38 +3,38 @@
 namespace TouristAgency.Data.Repositories
 {
     /// <summary>
-    /// Repository for data manipulation on User table / class
+    /// Repository for data manipulation on UserAccount table / class
     /// </summary>
-    public interface IUserRepository
+    public interface IUserAccountRepository
     {
         /// <summary>
-        /// Retrieve one User by Id
+        /// Retrieve one UserAccount by Id
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="UserAccountId"></param>
         /// <returns></returns>
-        User GetUser(int userId);
+        UserAccount GetUserAccount(int UserAccountId);
         /// <summary>
-        /// Get all of the Users in the database
+        /// Get all of the UserAccounts in the database
         /// </summary>
         /// <returns></returns>
-        ICollection<User> GetAllUsers();
+        ICollection<UserAccount> GetAllUserAccounts();
         /// <summary>
-        /// Remove the user with passed id from database
+        /// Remove the UserAccount with passed id from database
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="UserAccountId"></param>
         /// <returns></returns>
-        bool DeleteUser(int userId);
+        bool DeleteUserAccount(int UserAccountId);
         /// <summary>
-        /// Update User with passed data
+        /// Update UserAccount with passed data
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="UserAccount"></param>
         /// <returns></returns>
-        User UpdateUser(User user);
+        UserAccount UpdateUserAccount(UserAccount UserAccount);
         /// <summary>
-        /// Add a new User to the database
+        /// Add a new UserAccount to the database
         /// </summary>
-        /// <param name="user">User to be added</param>
-        /// <returns>Newly added User</returns>
-        User CreateUser(User user);
+        /// <param name="UserAccount">UserAccount to be added</param>
+        /// <returns>Newly added UserAccount</returns>
+        UserAccount CreateUserAccount(UserAccount UserAccount);
     }
 }

@@ -9,7 +9,7 @@ namespace TouristAgency.Services
     {
         private ITourTypeRepository _tourTypeRepository;
 
-        TourTypeService(ITourTypeRepository tourTypeRepository)
+        public TourTypeService(ITourTypeRepository tourTypeRepository)
         {
             _tourTypeRepository = tourTypeRepository;
         }

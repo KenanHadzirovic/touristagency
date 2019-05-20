@@ -35,7 +35,7 @@ namespace TouristAgency.Data
             _kernel.Bind<Repositories.ITouristRepository>().To<Repositories.TouristRepository>().InRequestScope();
             _kernel.Bind<Repositories.ITourRepository>().To<Repositories.TourRepository>().InRequestScope();
             _kernel.Bind<Repositories.ITourTypeRepository>().To<Repositories.TourTypeRepository>().InRequestScope();
-            _kernel.Bind<Repositories.IUserRepository>().To<Repositories.UserRepository>().InRequestScope();
+            _kernel.Bind<Repositories.IUserAccountRepository>().To<Repositories.UserAccountRepository>().InRequestScope();
         }
     }
 }

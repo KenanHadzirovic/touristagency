@@ -25,6 +25,6 @@ namespace TouristAgency.Contracts
         public string PhoneNumber { get; set; }
 
         [DataMember]
-        public int UserId { get; set; }
+        public int UserAccountId { get; set; }
     }
 }

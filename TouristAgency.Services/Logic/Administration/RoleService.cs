@@ -9,7 +9,7 @@ namespace TouristAgency.Services
     {
         private IRoleRepository _roleRepository;
 
-        RoleService(IRoleRepository roleRepository)
+        public RoleService(IRoleRepository roleRepository)
         {
             _roleRepository = roleRepository;
         }

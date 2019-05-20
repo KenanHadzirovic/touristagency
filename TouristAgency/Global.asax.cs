@@ -1,7 +1,9 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using TouristAgency.Services;
 
 namespace TouristAgency
 {
@@ -15,6 +17,21 @@ namespace TouristAgency
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             GlobalConfiguration.Configuration.EnsureInitialized();
+
+            // Configure AutoMapper
+            AutoMapperConfiguration.Configure();
+        }
+    }
+
+    public class AutoMapperConfiguration
+    {
+        public static MapperConfiguration Configure()
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<MappingProfile>();
+            });
+            return config;
         }
     }
 }

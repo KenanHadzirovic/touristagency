@@ -8,7 +8,7 @@ namespace TouristAgency.Data.Repositories
     {
         private DataModel _context;
 
-        PrivilegeRepository(DataModel context)
+        public PrivilegeRepository(DataModel context)
         {
             _context = context;
         }

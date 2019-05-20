@@ -8,7 +8,7 @@ namespace TouristAgency.Data.Repositories
     {
         private DataModel _context;
 
-        EmployeeRepository(DataModel context)
+        public EmployeeRepository(DataModel context)
         {
             _context = context;
         }
@@ -51,7 +51,7 @@ namespace TouristAgency.Data.Repositories
             employee.DateOfBirth = newEmployee.DateOfBirth;
             employee.FirstName = newEmployee.FirstName;
             employee.LastName = newEmployee.LastName;
-            employee.UserId = newEmployee.UserId;
+            employee.UserAccountId = newEmployee.UserAccountId;
             return employee;
         }
     }

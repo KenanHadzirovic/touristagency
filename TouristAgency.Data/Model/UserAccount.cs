@@ -6,21 +6,21 @@ namespace TouristAgency.Data
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("User")]
-    public partial class User
+    [Table("UserAccount")]
+    public partial class UserAccount
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public UserAccount()
         {
             Employee = new HashSet<Employee>();
         }
 
-        public int UserId { get; set; }
+        public int UserAccountId { get; set; }
 
         [Required]
         [StringLength(50)]
         public string Username { get; set; }
-
+        
         [Required]
         [StringLength(300)]
         public string Password { get; set; }

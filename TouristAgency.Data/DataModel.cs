@@ -22,7 +22,7 @@ namespace TouristAgency.Data
         public virtual DbSet<Tour> Tour { get; set; }
         public virtual DbSet<Tourist> Tourist { get; set; }
         public virtual DbSet<TourType> TourType { get; set; }
-        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<UserAccount> UserAccount { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -59,7 +59,7 @@ namespace TouristAgency.Data
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Role>()
-                .HasMany(e => e.User)
+                .HasMany(e => e.UserAccount)
                 .WithRequired(e => e.Role)
                 .WillCascadeOnDelete(false);
 
@@ -86,9 +86,9 @@ namespace TouristAgency.Data
                 .WithRequired(e => e.TourType)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<UserAccount>()
                 .HasMany(e => e.Employee)
-                .WithRequired(e => e.User)
+                .WithRequired(e => e.UserAccount)
                 .WillCascadeOnDelete(false);
         }
     }

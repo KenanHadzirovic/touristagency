@@ -3,12 +3,12 @@ using TouristAgency.Contracts;
 
 namespace TouristAgency.Services
 {
-    public interface IUserService
+    public interface IUserAccountService
     {
-        ICollection<User> GetUsers();
-        User GetUser(int userId);
-        User UpdateUser(User user);
-        User CreateUser(User user);
-        bool DeleteUser(int userId);
+        ICollection<UserAccount> GetUserAccounts();
+        UserAccount GetUserAccount(int UserAccountId);
+        UserAccount UpdateUserAccount(UserAccount UserAccount);
+        UserAccount CreateUserAccount(UserAccount UserAccount);
+        bool DeleteUserAccount(int UserAccountId);
     }
 }
