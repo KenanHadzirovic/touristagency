@@ -7,40 +7,42 @@ namespace TouristAgency.Services
 {
     public class UserAccountService : IUserAccountService
     {
-        private IUserAccountRepository _UserAccountRepository;
+        private IUserAccountRepository _userAccountRepository;
+        private IMapper _mapper;
 
-        public UserAccountService(IUserAccountRepository UserAccountRepository)
+        public UserAccountService(IUserAccountRepository UserAccountRepository, IMapper mapper)
         {
-            _UserAccountRepository = UserAccountRepository;
+            _userAccountRepository = UserAccountRepository;
+            _mapper = mapper;
         }
 
         public Contracts.UserAccount CreateUserAccount(Contracts.UserAccount UserAccount)
         {
             Model.UserAccount efUserAccount = Mapper.Map<Contracts.UserAccount, Model.UserAccount>(UserAccount);
-            efUserAccount = _UserAccountRepository.CreateUserAccount(efUserAccount);
-            return Mapper.Map<Model.UserAccount, Contracts.UserAccount>(efUserAccount);
+            efUserAccount = _userAccountRepository.CreateUserAccount(efUserAccount);
+            return _mapper.Map<Model.UserAccount, Contracts.UserAccount>(efUserAccount);
         }
 
         public Contracts.UserAccount UpdateUserAccount(Contracts.UserAccount UserAccount)
         {
-            Model.UserAccount efUserAccount = Mapper.Map<Contracts.UserAccount, Model.UserAccount>(UserAccount);
-            _UserAccountRepository.UpdateUserAccount(efUserAccount);
+            Model.UserAccount efUserAccount = _mapper.Map<Contracts.UserAccount, Model.UserAccount>(UserAccount);
+            _userAccountRepository.UpdateUserAccount(efUserAccount);
             return UserAccount;
         }
 
         public ICollection<Contracts.UserAccount> GetUserAccounts()
         {
-            return Mapper.Map<ICollection<Model.UserAccount>, ICollection<Contracts.UserAccount>>(_UserAccountRepository.GetAllUserAccounts());
+            return _mapper.Map<ICollection<Model.UserAccount>, ICollection<Contracts.UserAccount>>(_userAccountRepository.GetAllUserAccounts());
         }
 
         public Contracts.UserAccount GetUserAccount(int UserAccountId)
         {
-            return Mapper.Map<Model.UserAccount, Contracts.UserAccount>(_UserAccountRepository.GetUserAccount(UserAccountId));
+            return _mapper.Map<Model.UserAccount, Contracts.UserAccount>(_userAccountRepository.GetUserAccount(UserAccountId));
         }
 
         public bool DeleteUserAccount(int UserAccountId)
         {
-            return _UserAccountRepository.DeleteUserAccount(UserAccountId);
+            return _userAccountRepository.DeleteUserAccount(UserAccountId);
         }
     }
 }
