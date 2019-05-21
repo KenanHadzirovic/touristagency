@@ -36,6 +36,7 @@ namespace TouristAgency.Data.Repositories
         public UserAccount CreateUserAccount(UserAccount userAccount)
         {
             _context.UserAccount.Add(userAccount);
+            _context.SaveChanges();
             return userAccount;
         }
 
@@ -47,9 +48,9 @@ namespace TouristAgency.Data.Repositories
 
         private UserAccount Update(UserAccount userAccount, UserAccount newUserAccount)
         {
-            userAccount.RoleId = newUserAccount.RoleId;
             userAccount.UserAccountId = newUserAccount.UserAccountId;
             userAccount.Username = newUserAccount.Username;
+            userAccount.Password = newUserAccount.Password;
             return userAccount;
         }
     }

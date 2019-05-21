@@ -18,7 +18,7 @@
           <td>{{ employee.phoneNumber }}</td>
           <td>
             <select class="form-control" [(ngModel)]="employee.roleId">
-              <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+              <option *ngFor="let role of roles" [value]="role.roleId">{{ role.roleName }}</option>
             </select>
           </td>
           <td>

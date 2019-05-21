@@ -6,6 +6,9 @@ namespace TouristAgency.Contracts
     public class UserAccount
     {
         [DataMember]
+        public string Password { get; set; }
+
+        [DataMember]
         public int UserAccountId { get; set; }
 
         [DataMember]

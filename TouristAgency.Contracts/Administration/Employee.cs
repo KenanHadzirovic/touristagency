@@ -13,6 +13,9 @@ namespace TouristAgency.Contracts
         public string FirstName { get; set; }
 
         [DataMember]
+        public string FullName { get; set; }
+
+        [DataMember]
         public string LastName { get; set; }
 
         [DataMember]

@@ -1,6 +1,7 @@
 import { Privilege } from './privilege';
 
 export class Role {
-    name: string;
+    roleId: number;
+    roleName: string;
     privileges?: Privilege[] = [];
 }

@@ -8,8 +8,10 @@ namespace TouristAgency.Services
     {
         public MappingProfile()
         {
+            // Model to Contracts
             CreateMap<Data.UserAccount, Contracts.UserAccount>().ReverseMap();
-            CreateMap<Data.Employee, Contracts.Employee>().ReverseMap();
+            CreateMap<Data.Employee, Contracts.Employee>()
+                .ForMember(x => x.FullName, y => y.MapFrom(z => $"{z.FirstName} {z.LastName}"));
             CreateMap<Data.Feature, Contracts.Feature>().ReverseMap();
             CreateMap<Data.FeatureType, Contracts.FeatureType>().ReverseMap();
             CreateMap<Data.Hotel, Contracts.Hotel>().ReverseMap();
@@ -18,6 +20,9 @@ namespace TouristAgency.Services
             CreateMap<Data.Tour, Contracts.Tour>().ReverseMap();
             CreateMap<Data.Tourist, Contracts.Tourist>().ReverseMap();
             CreateMap<Data.TourType, Contracts.TourType>().ReverseMap();
+
+            // Contracts to Model
+            CreateMap<Contracts.Employee, Data.Employee>();
         }
     }
 }

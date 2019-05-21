@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Employee } from '../../models/employee';
+import { Role } from '../../models/role';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
@@ -10,13 +10,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeService {
+export class RoleService {
 
   constructor(private http: HttpClient) { }
 
-  employeeUrl = environment.serviceUrl + 'employee';
+  roleUrl = environment.serviceUrl + 'role';
 
-  getAll = (): Observable<Employee[]> => {
-    return this.http.get<Employee[]>(this.employeeUrl);
+  getAll = (): Observable<Role[]> => {
+    return this.http.get<Role[]>(this.roleUrl);
   }
 }

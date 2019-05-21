@@ -18,7 +18,7 @@ namespace TouristAgency.Services
 
         public Contracts.UserAccount CreateUserAccount(Contracts.UserAccount UserAccount)
         {
-            Model.UserAccount efUserAccount = Mapper.Map<Contracts.UserAccount, Model.UserAccount>(UserAccount);
+            Model.UserAccount efUserAccount = _mapper.Map<Contracts.UserAccount, Model.UserAccount>(UserAccount);
             efUserAccount = _userAccountRepository.CreateUserAccount(efUserAccount);
             return _mapper.Map<Model.UserAccount, Contracts.UserAccount>(efUserAccount);
         }

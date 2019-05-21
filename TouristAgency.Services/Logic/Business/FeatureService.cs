@@ -9,34 +9,36 @@ namespace TouristAgency.Services
     public class FeatureService : IFeatureService
     {
         private IFeatureRepository _featureRepository;
+        private IMapper _mapper;
 
-        public FeatureService(IFeatureRepository featureRepository)
+        public FeatureService(IFeatureRepository featureRepository, IMapper mapper)
         {
+            _mapper = mapper;
             _featureRepository = featureRepository;
         }
 
         public Contracts.Feature CreateFeature(Contracts.Feature feature)
         {
-            Model.Feature efFeature = Mapper.Map<Contracts.Feature, Model.Feature>(feature);
+            Model.Feature efFeature = _mapper.Map<Contracts.Feature, Model.Feature>(feature);
             efFeature = _featureRepository.CreateFeature(efFeature);
-            return Mapper.Map<Model.Feature, Contracts.Feature>(efFeature);
+            return _mapper.Map<Model.Feature, Contracts.Feature>(efFeature);
         }
 
         public Contracts.Feature UpdateFeature(Contracts.Feature feature)
         {
-            Model.Feature efFeature = Mapper.Map<Contracts.Feature, Model.Feature>(feature);
+            Model.Feature efFeature = _mapper.Map<Contracts.Feature, Model.Feature>(feature);
             _featureRepository.UpdateFeature(efFeature);
             return feature;
         }
 
         public ICollection<Contracts.Feature> GetFeatures()
         {
-            return Mapper.Map<ICollection<Model.Feature>, ICollection<Contracts.Feature>>(_featureRepository.GetAllFeatures());
+            return _mapper.Map<ICollection<Model.Feature>, ICollection<Contracts.Feature>>(_featureRepository.GetAllFeatures());
         }
 
         public Contracts.Feature GetFeature(int featureId)
         {
-            return Mapper.Map<Model.Feature, Contracts.Feature>(_featureRepository.GetFeature(featureId));
+            return _mapper.Map<Model.Feature, Contracts.Feature>(_featureRepository.GetFeature(featureId));
         }
 
         public bool DeleteFeature(int featureId)

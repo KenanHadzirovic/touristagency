@@ -12,8 +12,7 @@ namespace TouristAgency.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Role()
         {
-            RolePrivilege = new HashSet<RolePrivilege>();
-            UserAccount = new HashSet<UserAccount>();
+            Privileges = new HashSet<Privilege>();
         }
 
         public int RoleId { get; set; }
@@ -23,9 +22,6 @@ namespace TouristAgency.Data
         public string RoleName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RolePrivilege> RolePrivilege { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserAccount> UserAccount { get; set; }
+        public virtual ICollection<Privilege> Privileges { get; set; }
     }
 }

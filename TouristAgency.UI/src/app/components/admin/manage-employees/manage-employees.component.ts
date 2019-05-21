@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../../../services/employee/employee.service';
+import { RoleService } from '../../../services/role/role.service';
+import { Employee } from 'src/app/models/employee';
+import { Role } from 'src/app/models/role';
 
 @Component({
   selector: 'app-manage-employees',
@@ -8,17 +11,20 @@ import { EmployeeService } from '../../../services/employee/employee.service';
 })
 export class ManageEmployeesComponent implements OnInit {
 
-  private employees: any;
-  private roles: any[] = [
-    { id: 1, name: "Administrator" },
-    { id: 2, name: "Agent" },
-    { id: 3, name: "Support" },
-  ];
+  private employees: Employee[];
+  private roles: Role[];
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService, private roleService: RoleService) { }
 
   ngOnInit() {
-    this.employees = this.employeeService.getAll();
+    this.employeeService.getAll().subscribe((data: Employee[]) => {
+      this.employees = data;
+    });
+
+    this.roleService.getAll().subscribe((data: Role[]) => {
+      this.roles = data;
+      console.log(this.roles);
+    })
   }
 
   removeEmployee = (index: number) => {

@@ -23,7 +23,8 @@ export class SecurityManagementComponent implements OnInit {
 
   private roles: Role[] = [
     {
-      name: "Administrator", privileges: [
+      roleId: 1,
+      roleName: "Administrator", privileges: [
         { name: "Can manage users" },
         { name: "Can manage tours" },
         { name: "Can manage reservations" },
@@ -31,13 +32,15 @@ export class SecurityManagementComponent implements OnInit {
       ]
     },
     {
-      name: "Agent",
+      roleId: 2,
+      roleName: "Agent",
       privileges: [
         { name: "Can manage reservations" }
       ]
     },
     {
-      name: 'Support',
+      roleId: 3,
+      roleName: 'Support',
       privileges: [
         { name: "Can manage users" }
       ]
@@ -56,7 +59,7 @@ export class SecurityManagementComponent implements OnInit {
 
   addNewPrivilege = () => {
     const modalRef = this.modalService.open(NewPrivilegeComponent);
-    modalRef.componentInstance.roleName = this.selectedRole.name;
+    modalRef.componentInstance.roleName = this.selectedRole.roleName;
     
     // TODO: this should be filtered by id not name
     modalRef.componentInstance.privileges = this.allPrivileges.filter(x => !this.selectedRole.privileges.find(p => p.name == x.name));
@@ -74,7 +77,7 @@ export class SecurityManagementComponent implements OnInit {
     modalRef.result.then((roleName: string) => {
       if (roleName) {
         let newRole = new Role();
-        newRole.name = roleName;
+        newRole.roleName = roleName;
         
         // TODO: go to service and save role with "roleName"
 

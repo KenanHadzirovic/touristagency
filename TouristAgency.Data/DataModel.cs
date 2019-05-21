@@ -18,7 +18,6 @@ namespace TouristAgency.Data
         public virtual DbSet<Hotel> Hotel { get; set; }
         public virtual DbSet<Privilege> Privilege { get; set; }
         public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<RolePrivilege> RolePrivilege { get; set; }
         public virtual DbSet<Tour> Tour { get; set; }
         public virtual DbSet<Tourist> Tourist { get; set; }
         public virtual DbSet<TourType> TourType { get; set; }
@@ -49,19 +48,16 @@ namespace TouristAgency.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<Privilege>()
-                .HasMany(e => e.RolePrivilege)
-                .WithRequired(e => e.Privilege)
-                .WillCascadeOnDelete(false);
+                .HasMany<Role>(s => s.Roles)
+                .WithMany(c => c.Privileges)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("PrivilegeId");
+                    cs.MapRightKey("RoleId");
+                    cs.ToTable("RolePrivilege");
+                });
 
-            modelBuilder.Entity<Role>()
-                .HasMany(e => e.RolePrivilege)
-                .WithRequired(e => e.Role)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Role>()
-                .HasMany(e => e.UserAccount)
-                .WithRequired(e => e.Role)
-                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Role>();
 
             modelBuilder.Entity<Tour>()
                 .HasMany(e => e.Feature)
@@ -87,9 +83,8 @@ namespace TouristAgency.Data
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<UserAccount>()
-                .HasMany(e => e.Employee)
-                .WithRequired(e => e.UserAccount)
-                .WillCascadeOnDelete(false);
+                .HasOptional(x => x.Employee)
+                .WithRequired(y => y.UserAccount);
         }
     }
 }
