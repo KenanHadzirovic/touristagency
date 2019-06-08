@@ -5,24 +5,27 @@
         <h1 class="h3">Podaci o putniku</h1>
       </div>
       <div class="pt-4 row d-flex justify-content-between">
-        <input type="text" placeholder="Ime" class="w-40 form-control"/>
-        <input type="text" placeholder="Prezime" class="w-40 form-control"/>
+        <input type="text" name="firstname" placeholder="Ime" class="w-40 form-control" [(ngModel)]="tourist.firstname"/>
+        <input type="text" name="lastname" placeholder="Prezime" class="w-40 form-control" [(ngModel)]="tourist.lastname"/>
       </div>
       <div class="row pt-4">
-        <label>Datum rođenja <input type="date" class="form-control" /></label>
+        <label>Datum rođenja <input type="date" class="form-control" name="dateofbirth" [(ngModel)]="tourist.dateofbirth"/></label>
       </div>
       <div class="pt-4 row d-flex justify-content-between">
-        <input type="text" placeholder="JMBG" class="w-40 form-control" />
-        <input type="text" placeholder="Broj pasoša" class="w-40 form-control" />
+        <input type="text" name="ssn" placeholder="JMBG" class="w-40 form-control" [(ngModel)]="tourist.ssn"/>
+        <input type="text" name="passportnumber" placeholder="Broj pasoša" class="w-40 form-control" />
       </div>
       <div class="pt-4 row">
-        <input type="text" class="w-100 form-control" placeholder="Adresa stanovanja" />
+        <input type="text" class="w-100 form-control" name="address" placeholder="Adresa stanovanja" [(ngModel)]="tourist.address"/>
       </div>
       <div class="pt-5 row d-flex justify-content-around">
-        <button class="btn btn-outline-danger">Obriši</button>
-        <button class="btn btn-primary">Spasi</button>
+        <button class="btn btn-outline-danger" (click)="clearForm()">Obriši</button>
+        <button class="btn btn-primary" (click)="submit()">Spasi</button>
       </div>
+      <label id="ermessage" for="errormessage">{{errormessage}}</label>
+      <label id="successmessage" for="success">{{success}}</label>
     </div>
   </div>
+  
   <div class="w-70 background-right"></div>
 </div>

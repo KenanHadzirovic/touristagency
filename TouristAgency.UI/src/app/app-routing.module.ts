@@ -13,7 +13,7 @@ import { ManageEmployeesComponent } from './components/admin/manage-employees/ma
 
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'dashboard/tours', component: ToursComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard/tours', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'dashboard/reservations', component: ReservationsComponent, canActivate: [AuthGuard] },
   { path: 'administration/passenger/new', component: NewPassengerComponent, canActivate: [AuthGuard] },
   { path: 'administration/tour/new', component: NewTourComponent, canActivate: [AuthGuard] },

@@ -1,3 +1,10 @@
 .container {
-    background-color: rgba(230, 230, 230, .1);
+    background-color: rgba(230, 230, 230, 0.8);
+}
+
+#ermessage{
+    color: red;
+}
+#successmessage{
+    color: green;
 }

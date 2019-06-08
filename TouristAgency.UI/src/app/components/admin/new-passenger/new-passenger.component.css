@@ -1,3 +1,11 @@
-.background-right {
-    background-image: url('../../../../assets/ocean.jpg');
+.content-left {
+    background-color: rgba(230, 230, 230, 0.8);
+
+}
+#ermessage{
+    margin-top: 10px;
+    color: red;
+}
+#successmessage{
+    color: green;
 }

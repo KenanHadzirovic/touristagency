@@ -1,8 +1,8 @@
-<div class="container pb-2 pl-4 pr-4 pt-2 mt-5 shadow rounded">
+<div class="container pb-2 pl-4 pr-4 pt-2 mt-5 shadow rounded" id="role">
   <div class="row form-group">
     <label for="tour">Izaberite postojeću rolu:</label>
     <select name="tour" class="form-control" [(ngModel)]="selectedRole">
-      <option *ngFor="let role of roles" [ngValue]="role">{{ role.name }}</option>
+      <option *ngFor="let role of roles" [ngValue]="role">{{ role.roleName }}</option>
     </select>
   </div>
 
@@ -34,6 +34,7 @@
     <div class="d-flex w-100">
       <button type="button" class="btn btn-primary mr-auto" (click)="addNewRole()">Kreiraj novu rolu</button>
       <button type="button" class="btn btn-danger mr-1" (click)="clearForm()">Očisti</button>
+      <label id="ermessage" for="errormessage">{{errormessage}}</label>
     </div>
   </div>
 </div>

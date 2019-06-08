@@ -13,6 +13,8 @@ import { Privilege } from '../../../models/privilege';
 export class SecurityManagementComponent implements OnInit {
 
   private selectedRole: Role;
+  private errormessage="";
+  private success="";
 
   private allPrivileges: Privilege[] = [
     { name: "Can manage users" },
@@ -78,9 +80,6 @@ export class SecurityManagementComponent implements OnInit {
       if (roleName) {
         let newRole = new Role();
         newRole.roleName = roleName;
-        
-        // TODO: go to service and save role with "roleName"
-
         this.roles.push(newRole);
         this.selectedRole = newRole;
       }

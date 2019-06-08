@@ -15,7 +15,7 @@
   <div class="row form-group">
     <label for="tourist">Izaberite putnika:</label>
     <select name="tourist" class="form-control" [(ngModel)]="reservation.tourist">
-      <option *ngFor="let tourist of tourists" [value]="tourist.id">{{ tourist.fullName }}</option>
+      <option *ngFor="let tourist of tourists" [value]="tourist.id">{{ tourist.firstname }}</option>
     </select>
   </div>
 
@@ -96,4 +96,6 @@
     <button type="button" class="btn btn-danger mr-1" (click)="clearForm()">Očisti</button>
     <button type="button" class="btn btn-success ml-1" (click)="submit()">Potvrdi rezervaciju</button>
   </div>
+  <div><label id="ermessage" for="errormessage">{{errormessage}}</label></div>
+  <label id="successmessage" for="success">{{success}}</label>
 </div>

@@ -13,9 +13,9 @@ export class NewFeatureComponent implements OnInit {
   private feature: Feature = new Feature();
 
   private featureTypes: FeatureType[] = [
-    { id: 1, name: "Naziv tipa", description: "Opis"},
-    { id: 2, name: "Naziv tipa2", description: "Opis"},
-    { id: 3, name: "Naziv tipa3", description: "Opis"},
+    { id: 1, name: "Feature1", description: "Opis"},
+    { id: 2, name: "Feature2", description: "Opis"},
+    { id: 3, name: "Feature3", description: "Opis"},
   ];
 
   constructor(public activeModal: NgbActiveModal) { }

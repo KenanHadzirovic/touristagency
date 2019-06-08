@@ -4,6 +4,7 @@ using TouristAgency.Services;
 
 namespace TouristAgency.Controllers
 {
+    [RoutePrefix("api/tour")]
     public class TourController : ApiController
     {
         private ITourService _tourService;

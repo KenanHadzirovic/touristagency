@@ -12,6 +12,9 @@ import { Router } from '@angular/router';
 export class ReservationsComponent implements OnInit {
 
   private reservation: Reservation = new Reservation();
+  private errormessage="";
+  private success="";
+  private saved;
 
   private tours: Tour[] = [
     { 
@@ -70,9 +73,9 @@ export class ReservationsComponent implements OnInit {
   ];
 
   private tourists: Tourist[] = [
-    { id: 1, fullName: "Mirza Vucijak" },
-    { id: 2, fullName: "Steve Jobs" },
-    { id: 2, fullName: "Satya Nadella" },
+    { id: 1, firstname: "Mirza" , lastname: "Vucijak", ssn:"", address: "wa", dateofbirth: ""},
+    { id: 2, firstname: "Steve", lastname: "Jobs", ssn:"", address: "wa", dateofbirth: "" },
+    { id: 2, firstname: "Satya", lastname: "Nadella", ssn:"", address: "wa", dateofbirth: "" },
   ]
 
   constructor(private router: Router) { 
@@ -80,6 +83,7 @@ export class ReservationsComponent implements OnInit {
     
     if (tourData) {
       this.reservation.tour = this.tours.find(x => x.id == tourData.id);
+
     }
   }
 
@@ -88,9 +92,20 @@ export class ReservationsComponent implements OnInit {
 
   clearForm = () => {
     this.reservation = new Reservation();
+    this.errormessage="";
+    this.success= "";
   }
 
   submit = () => {
-    
+    this.saved=false;
+    this.errormessage="";
+    if(this.reservation.tour==null || this.reservation.tourist==null)
+      {
+        this.errormessage= "Some of the required fields are empty!";
+      }
+    else{
+      this.success= "Reservation saved.";
+    }
+      
   }
 }

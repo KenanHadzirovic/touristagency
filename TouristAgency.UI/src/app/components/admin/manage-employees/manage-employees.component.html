@@ -11,14 +11,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of employees; let i = index">
+        <tr *ngFor="let employee of listofemployees; let i = index">
           <td>{{ employee.fullName }}</td>
           <td>{{ employee.dateOfBirth | date }}</td>
           <td>{{ employee.address }}</td>
           <td>{{ employee.phoneNumber }}</td>
           <td>
             <select class="form-control" [(ngModel)]="employee.roleId">
-              <option *ngFor="let role of roles" [value]="role.roleId">{{ role.roleName }}</option>
+              <option *ngFor="let role of listofroles" [value]="role.roleId">{{ role.roleName }}</option>
             </select>
           </td>
           <td>

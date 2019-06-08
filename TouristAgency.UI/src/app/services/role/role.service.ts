@@ -14,9 +14,15 @@ export class RoleService {
 
   constructor(private http: HttpClient) { }
 
-  roleUrl = environment.serviceUrl + 'role';
+  roleUrl = environment.serviceUrl + 'useraccount';
 
   getAll = (): Observable<Role[]> => {
     return this.http.get<Role[]>(this.roleUrl);
   }
+
+  PostData(role: Role) {
+    const retVal = this.http.post(this.roleUrl, {name: role.roleName}).subscribe
+    (data => console.log(data));
+  }
+
 }

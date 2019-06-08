@@ -9,7 +9,7 @@
       <label for="name">Naziv:</label>
       <input name="name" type="text" class="form-control" [(ngModel)]="hotel.name" />
     </div>
-
+    
     <div class="d-flex w-100 justify-content-between">
       <div class="form-group">
         <label for="country">Država:</label>
@@ -51,4 +51,6 @@
     <button type="button" class="btn btn-danger mr-1" (click)="clearForm()">Očisti</button>
     <button type="button" class="btn btn-success ml-1" (click)="submit()">Kreiraj</button>
   </div>
+  <label id="ermessage" for="errormessage">{{errormessage}}</label>
+  <label id="successmessage" for="success">{{success}}</label>
 </div>
