@@ -23,35 +23,35 @@ export class ManageEmployeesComponent implements OnInit {
     {
       roleId: 1,
       roleName: "Administrator", privileges: [
-        { name: "Can manage users" },
-        { name: "Can manage tours" },
-        { name: "Can manage reservations" },
-        { name: "Can manage security" }
+        { name: "Upravljanje korisnicima" },
+        { name: "Upravljanje putovanjima" },
+        { name: "Upravljanje rezervacijama" },
+        { name: "Sigurnosne postavke" }
       ]
     },
     {
       roleId: 2,
       roleName: "Agent",
       privileges: [
-        { name: "Can manage reservations" }
+        { name: "Upravljanje rezervacijama" }
       ]
     },
     {
       roleId: 3,
       roleName: 'Support',
       privileges: [
-        { name: "Can manage users" }
+        { name: "Upravljanje korisnicima" }
       ]
     }
   ]
 
   private listofemployees: Employee[] = [
-    { fullName: "Mirza Vucijak", address: "Adresa 1", dateOfBirth: new Date("02/02/1995"), id:2, roleId: 1, phoneNumber:"032656"},
-    { fullName: "Kenan Hadzirovic", address: "Adresa 1", dateOfBirth: new Date("02/02/1995"), id:2,roleId:1, phoneNumber:"032656" },
-    { fullName: "Dzenita Ljevo", address: "Adresa 1", dateOfBirth: new Date("02/02/1995"), id:2,roleId:1, phoneNumber:"032656" },
-    { fullName: "Adna Tucak", address: "Adresa 1", dateOfBirth: new Date("02/02/1995"), id:2,roleId:1, phoneNumber:"032656" },
-    { fullName: "Amar Saradak", address: "Adresa 1", dateOfBirth:new Date("02/02/1995"), id:2, roleId:1, phoneNumber:"032656" },
-    { fullName: "Nadja Zilic", address: "Adresa 1", dateOfBirth: new Date("02/02/1995"), id:2, roleId:1, phoneNumber:"032656" },
+    { fullName: "Mirza Vucijak", address: "Adresa 1", dateOfBirth: new Date("02/02/1995"), id:2, roleId: 1, phoneNumber:"033/225-883"},
+    { fullName: "Kenan Hadzirovic", address: "Adresa 2", dateOfBirth: new Date("09/26/1996"), id:2,roleId:2, phoneNumber:"033/225/883" },
+    { fullName: "Dzenita Ljevo", address: "Adresa 3", dateOfBirth: new Date("07/21/1995"), id:2,roleId:3, phoneNumber:"033/225/883" },
+    { fullName: "Adna Tucak", address: "Adresa 4", dateOfBirth: new Date("02/05/1995"), id:2,roleId:1, phoneNumber:"033/225/883" },
+    { fullName: "Amar Saradak", address: "Adresa 5", dateOfBirth:new Date("02/12/1995"), id:2, roleId:1, phoneNumber:"033/225/883" },
+    { fullName: "Nadja Zilic", address: "Adresa 6", dateOfBirth: new Date("04/09/1995"), id:2, roleId:1, phoneNumber:"033/225/883" },
 
   ];
 

@@ -32,5 +32,8 @@ namespace TouristAgency.Contracts
 
         [DataMember]
         public bool PricePerDay { get; set; }
+
+        [DataMember]
+        public string Image { get; set; }
     }
 }

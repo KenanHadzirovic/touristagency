@@ -20,6 +20,8 @@ import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewRoleComponent } from './components/admin/security-management/new-role/new-role.component';
 import { NewPrivilegeComponent } from './components/admin/security-management/new-privilege/new-privilege.component';
 import { NewFeatureComponent } from './components/admin/new-tour/new-feature/new-feature.component';
+import { RoleHistoryComponent } from './components/admin/role-history/role-history.component';
+import { ActionLogComponent } from './components/admin/action-log/action-log.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { NewFeatureComponent } from './components/admin/new-tour/new-feature/new
     TourDetailsComponent,
     NewRoleComponent,
     NewPrivilegeComponent,
-    NewFeatureComponent
+    NewFeatureComponent,
+    RoleHistoryComponent,
+    ActionLogComponent
   ],
   imports: [
     BrowserModule,

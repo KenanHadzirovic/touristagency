@@ -3,6 +3,7 @@ import { TourService } from '../../services/tour/tour.service';
 import { Tour } from '../../models/tour';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TourDetailsComponent } from '../tour-details/tour-details.component';
+import { TourType } from 'src/app/models/tourType';
 
 @Component({
   selector: 'app-tours',
@@ -15,10 +16,12 @@ export class ToursComponent implements OnInit {
     private tourService: TourService,
     private modalService: NgbModal) { }
 
-  private tours: Tour[];
+  private tours: TourType[];
 
   ngOnInit() {
-    this.tours = this.tourService.getAll();
+    this.tourService.getAll().subscribe(tours => {
+      this.tours = tours;
+    });
   }
 
   openTourDetails = (tour: Tour) => {

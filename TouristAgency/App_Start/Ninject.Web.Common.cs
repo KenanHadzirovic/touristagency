@@ -76,7 +76,7 @@ namespace TouristAgency.App_Start
             kernel.Bind<IRoleRepository>().To<RoleRepository>();
             kernel.Bind<ITouristRepository>().To<TouristRepository>();
             kernel.Bind<ITourRepository>().To<TourRepository>();
-            kernel.Bind<ITourTypeRepository>().To<ITourTypeRepository>();
+            kernel.Bind<ITourTypeRepository>().To<TourTypeRepository>();
 
             // Services
             kernel.Bind<IUserAccountService>().To<UserAccountService>();

@@ -1,7 +1,13 @@
 .content-left {
     background-color: rgba(230, 230, 230, 0.8);
-
 }
+
+.background-right {
+    background-image: url('https://i.imgur.com/nUakihR.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #ermessage{
     margin-top: 10px;
     color: red;

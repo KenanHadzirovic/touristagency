@@ -1,6 +1,6 @@
 <div class="d-flex p-2 flex-wrap justify-content-around">
   <div *ngFor="let tour of tours" class="card mt-2 mb-2 shadow" style="width: 20rem">
-    <img class="card-img-top" [src]="tour.previewImage" />
+    <img class="card-img-top img" [src]="tour.image" />
     <div class="card-body">
       <h5 class="card-title">{{ tour.name }}</h5>
       <p class="card-text">{{ tour.description }}</p>

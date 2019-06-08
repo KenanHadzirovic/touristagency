@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center pt-3">
+  <input class="search" type="text" [(ngModel)]="searchString" (input)="filter()" placeholder="Pretraga...">
+</div>
+<div class="d-flex justify-content-center pt-3">
+  <table class="table table-striped table-bordered w-80 shadow rounded">
+      <thead>
+        <tr>
+          <th scope="col">Vrijeme akcije</th>
+          <th scope="col">Korisničko ime</th>
+          <th scope="col">Rola</th>
+          <th scope="col">Akcija</th>
+          <th scope="col">IP Adresa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let action of filteredActions">
+          <td>{{ action.date | date :'medium'}}</td>
+          <td>{{ action.username }}</td>
+          <td>{{ action.role }}</td>
+          <td>{{ action.action }}</td>
+          <td>{{ action.ipAddress }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
